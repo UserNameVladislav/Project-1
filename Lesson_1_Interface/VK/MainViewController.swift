@@ -43,6 +43,15 @@ class MainViewController: UIViewController {
    
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let login = userNameTextField.text!, password = passwordTextField.text!
+        
+        if login == "admin" && password == "1234" {
+            return true
+        } else {
+            return false
+        }
+    }
 
 }
 
