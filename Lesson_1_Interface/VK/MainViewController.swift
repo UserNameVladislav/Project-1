@@ -44,14 +44,31 @@ class MainViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        let login = userNameTextField.text!, password = passwordTextField.text!
         
+        let checkResult = checkUserData()
+        
+        if !checkResult {
+            showLoginError()
+        }
+        
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
+        let login = userNameTextField.text!, password = passwordTextField.text!
         if login == "admin" && password == "1234" {
             return true
         } else {
             return false
         }
     }
+    func showLoginError() {
+        let alert = UIAlertController(title: "Ошибка", message: "Введены неверные данные", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
 
 }
 
