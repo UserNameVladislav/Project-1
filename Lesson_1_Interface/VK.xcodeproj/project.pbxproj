@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99AA14FB286B2AEE00401DF0 /* AllGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AA14FA286B2AEE00401DF0 /* AllGroups.swift */; };
+		99AA14FD286B2B9100401DF0 /* MyFriendGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AA14FC286B2B9100401DF0 /* MyFriendGroups.swift */; };
 		99D03ACD2836B5220093A2A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D03ACC2836B5220093A2A4 /* AppDelegate.swift */; };
 		99D03ACF2836B5220093A2A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D03ACE2836B5220093A2A4 /* SceneDelegate.swift */; };
 		99D03AD42836B5220093A2A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D03AD22836B5220093A2A4 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99AA14FA286B2AEE00401DF0 /* AllGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroups.swift; sourceTree = "<group>"; };
+		99AA14FC286B2B9100401DF0 /* MyFriendGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendGroups.swift; sourceTree = "<group>"; };
 		99D03AC92836B5220093A2A4 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D03ACC2836B5220093A2A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D03ACE2836B5220093A2A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				99D03ACE2836B5220093A2A4 /* SceneDelegate.swift */,
 				99D03AE02836BC5E0093A2A4 /* MainViewController.swift */,
 				99D03AD22836B5220093A2A4 /* Main.storyboard */,
+				99AA14FC286B2B9100401DF0 /* MyFriendGroups.swift */,
+				99AA14FA286B2AEE00401DF0 /* AllGroups.swift */,
 				99D03AD52836B5260093A2A4 /* Assets.xcassets */,
 				99D03AD72836B5260093A2A4 /* LaunchScreen.storyboard */,
 				99D03ADA2836B5260093A2A4 /* Info.plist */,
@@ -141,6 +147,8 @@
 				99D03ACD2836B5220093A2A4 /* AppDelegate.swift in Sources */,
 				99D03ACF2836B5220093A2A4 /* SceneDelegate.swift in Sources */,
 				99D03AE12836BC5E0093A2A4 /* MainViewController.swift in Sources */,
+				99AA14FB286B2AEE00401DF0 /* AllGroups.swift in Sources */,
+				99AA14FD286B2B9100401DF0 /* MyFriendGroups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

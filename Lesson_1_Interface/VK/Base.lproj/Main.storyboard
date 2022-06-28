@@ -149,7 +149,7 @@
                     <navigationItem key="navigationItem" id="Xcb-8b-lyc">
                         <barButtonItem key="rightBarButtonItem" image="arrowshape.zigzag.right" catalog="system" id="9SS-W8-6HN">
                             <connections>
-                                <segue destination="pwO-ia-69i" kind="show" id="pLd-v8-S3h"/>
+                                <segue destination="pwO-ia-69i" kind="show" identifier="" id="pLd-v8-S3h"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -158,16 +158,16 @@
             </objects>
             <point key="canvasLocation" x="5223.3644859813085" y="49.892008639308855"/>
         </scene>
-        <!--View Controller-->
+        <!--My Friend Groups-->
         <scene sceneID="y29-rT-0hi">
             <objects>
-                <viewController id="pwO-ia-69i" sceneMemberID="viewController">
+                <viewController id="pwO-ia-69i" customClass="MyFriendGroups" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="92Z-0w-HbY">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Xr-4W-vT1">
-                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                                <rect key="frame" x="0.0" y="138" width="428" height="705"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IyN-au-1Fw">
                                     <size key="itemSize" width="128" height="128"/>
@@ -186,17 +186,27 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7Y-dE-lzO">
+                                <rect key="frame" x="193" y="88" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KGy-B4-im9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KGy-B4-im9" firstAttribute="bottom" secondItem="1Xr-4W-vT1" secondAttribute="bottom" id="9jl-SR-Biy"/>
                             <constraint firstItem="1Xr-4W-vT1" firstAttribute="leading" secondItem="KGy-B4-im9" secondAttribute="leading" id="SgP-nn-ff5"/>
-                            <constraint firstItem="1Xr-4W-vT1" firstAttribute="top" secondItem="KGy-B4-im9" secondAttribute="top" id="wTq-G3-U4i"/>
+                            <constraint firstItem="1Xr-4W-vT1" firstAttribute="top" secondItem="KGy-B4-im9" secondAttribute="top" constant="50" id="wTq-G3-U4i"/>
                             <constraint firstItem="KGy-B4-im9" firstAttribute="trailing" secondItem="1Xr-4W-vT1" secondAttribute="trailing" id="wY6-Pw-3k8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6yH-QP-Toj"/>
+                    <connections>
+                        <outlet property="toTextFieldMyFriendG" destination="t7Y-dE-lzO" id="kgR-iq-Jro"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dL5-vf-G72" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +219,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n5h-Dx-6bp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ges-dI-vj9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -225,7 +236,7 @@
         <scene sceneID="eY9-ZD-rXE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pGf-ft-u2Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MyFriendList" selectedImage="pencil" catalog="system" id="EQx-vw-zMI"/>
+                    <tabBarItem key="tabBarItem" title="MyFriendList" image="person.2.fill" catalog="system" selectedImage="person.2" id="EQx-vw-zMI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ddV-8i-N9M">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -277,36 +288,64 @@
         <!--AllGroups-->
         <scene sceneID="hZ5-MS-rkj">
             <objects>
-                <viewController id="J0v-8T-AZw" sceneMemberID="viewController">
+                <viewController id="J0v-8T-AZw" customClass="AllGroups" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZJ-t9-TJY">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2bc-YL-uwt">
-                                <rect key="frame" x="0.0" y="88" width="428" height="755"/>
+                                <rect key="frame" x="0.0" y="138" width="428" height="705"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-2i-Rrv">
+                                <rect key="frame" x="100" y="96" width="178" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dqw:" destination="x1h-xj-Orh" eventType="editingDidEnd" id="ns0-um-bET"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndo-E6-icP">
+                                <rect key="frame" x="295" y="96" width="106" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="toPressedButtonGroups:" destination="J0v-8T-AZw" eventType="touchUpInside" id="fuE-si-pKa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fyg-je-ePT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ndo-E6-icP" firstAttribute="leading" secondItem="Seh-2i-Rrv" secondAttribute="trailing" constant="17" id="0j9-g6-ECP"/>
+                            <constraint firstItem="Fyg-je-ePT" firstAttribute="trailing" secondItem="Ndo-E6-icP" secondAttribute="trailing" constant="27" id="3WQ-2o-zbM"/>
+                            <constraint firstItem="Fyg-je-ePT" firstAttribute="trailing" secondItem="Seh-2i-Rrv" secondAttribute="trailing" constant="150" id="A8b-hz-ued"/>
+                            <constraint firstItem="2bc-YL-uwt" firstAttribute="top" secondItem="Seh-2i-Rrv" secondAttribute="bottom" constant="8" symbolic="YES" id="DG2-34-5g6"/>
+                            <constraint firstItem="Seh-2i-Rrv" firstAttribute="top" secondItem="Fyg-je-ePT" secondAttribute="top" constant="8" id="GY9-Ag-zbF"/>
+                            <constraint firstItem="2bc-YL-uwt" firstAttribute="top" secondItem="Ndo-E6-icP" secondAttribute="bottom" constant="11" id="I63-5p-2xx"/>
                             <constraint firstItem="2bc-YL-uwt" firstAttribute="leading" secondItem="Fyg-je-ePT" secondAttribute="leading" id="IP9-cW-FFB"/>
+                            <constraint firstItem="Seh-2i-Rrv" firstAttribute="leading" secondItem="Fyg-je-ePT" secondAttribute="leading" constant="100" id="Kga-rO-mVE"/>
+                            <constraint firstItem="Ndo-E6-icP" firstAttribute="top" secondItem="Fyg-je-ePT" secondAttribute="top" constant="8" id="YH6-e3-4YQ"/>
                             <constraint firstItem="Fyg-je-ePT" firstAttribute="bottom" secondItem="2bc-YL-uwt" secondAttribute="bottom" id="p7d-gu-iwF"/>
                             <constraint firstItem="Fyg-je-ePT" firstAttribute="trailing" secondItem="2bc-YL-uwt" secondAttribute="trailing" id="sX1-2D-R1T"/>
-                            <constraint firstItem="2bc-YL-uwt" firstAttribute="top" secondItem="Fyg-je-ePT" secondAttribute="top" id="wZq-N1-o3T"/>
+                            <constraint firstItem="2bc-YL-uwt" firstAttribute="top" secondItem="Fyg-je-ePT" secondAttribute="top" constant="50" id="wZq-N1-o3T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AllGroups" id="Ej4-6K-xBM"/>
+                    <connections>
+                        <outlet property="toTextFieldGroups" destination="Seh-2i-Rrv" id="hat-AB-TQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSj-yw-NDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="x1h-xj-Orh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6139" y="779"/>
+            <point key="canvasLocation" x="6138.7850467289718" y="778.8336933045357"/>
         </scene>
         <!--MyGroups-->
         <scene sceneID="FXN-dp-hvR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zjw-Xa-rwf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MyGroups" image="person.3.fill" catalog="system" id="bGo-pT-DjC"/>
+                    <tabBarItem key="tabBarItem" title="MyGroups" image="person.3.fill" catalog="system" selectedImage="person.3" id="bGo-pT-DjC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xgn-Jm-T5R">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -325,7 +364,9 @@
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.zigzag.right" catalog="system" width="128" height="93"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
